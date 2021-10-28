@@ -1,0 +1,108 @@
+<!--Topics covered in this HTML document are.
+    1. CC style tag
+    2. <marquee></marquee>  <- used to make a moving text in web page   
+    3. <label></label>      <- used to label any text
+    4. <form></form>
+    5. <select></select>     <- used to make drop down list.
+    6. <option></option>    <- used with select tag.
+    Attributes studied are:
+    1.color
+    2.font-size
+    3.font-family
+    4.direction
+    5.action
+    6.method
+    7.type , name , placeholder , reset ,email , number ,text etc <- used with input tag
+    8.id , class , imp ,
+    9. selected
+    10. for <- used with label tag to 
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head><title>DAY 2: Input tag</title>
+        <style>
+            marquee{
+                color: firebrick;
+                font-size: 80px;
+                font-family: fantasy;
+                margin-left: 0;
+            }
+            label{
+                color: rgb(20, 16, 240) ; <!--!important-->
+            }
+            .gen{ color: rgb(194, 236, 5) ;
+
+            }
+            #newgen{
+                color: rgb(165, 7, 41);
+                font-weight: bold;
+            }
+            #pad{
+                width: 40%;
+                background-color: chartreuse;
+                padding: 50px;
+            }
+            
+        </style>
+    </head>    
+    <body>  
+        <marquee direction="right">Welcome to facebook</marquee> <!--style="color: darkturquoise;font-size: 100px;"-->
+        <form action="mailto:someone@something.com" method="post">
+            <h1>Sign Up</h1>
+            <h3>It's quick and easy.</h3>
+            <!-- <form action=" server link is entered here usually" method = "POST"because we are sending the data to the server-->
+            Name: <br>
+            <input type="text" name="First Name" placeholder="Enter your first name" required> 
+            <input type="text" name="Surame" placeholder="Enter your surname" required>
+            <br><br>
+            Mobile No. :
+            <input type="number" name="Mobile No." placeholder="Enter your mobile no." required>
+            <br><br>
+            Email Address:
+            <input type="email" name="Email" placeholder="Enter your email address" required>
+            <!-- required keyword is used to make name inbox compulsory to enter-->
+            <br><br>
+            New Password : 
+            <input type="password" name="Password" placeholder="Enter your new passwprd" required>
+            <br><br>
+            Date of Birth:
+            <input type="date" name="Date of Birth" required>
+            <br><br>
+            Gender:
+            <input type="radio" name="gender" value="male" id="gender-m">
+            <label for="gender-m" class="gen" id="newgen">Male</label>
+            <input type="radio" name="gender" value="female" id="gender-f">
+            <label for="gender-f" class="gen"> Female</label>
+                <!-- "for" attribute in lable is used to bind the text with the value. 
+                Here in this case the unique id gender-f is binded with the label Female-->
+            <br><br>
+            Skills:
+            <input type="checkbox" name="skills" value="HTML" id="skill1">
+            <label for="skill1">HTML</label>
+            <input type="checkbox" name="skills" value="CSS" id="skill2">
+            <label for="skill2">CSS</label>
+            <br><br>
+            <input type="Submit" style="font-size: larger;background-color: darksalmon;" value="Signup">
+            <!--<input type="reset" value="Reset"> -->
+        </form>
+        <br><br>
+        <!--List of the Students:
+    <select name="List of students" id="">
+        <option>Select a student</option>
+        <option>Lokesh</option>
+        <option>Mohit</option> 
+        <option selected >Niharika</option>
+        <option>Nikhil</option>
+    </select>
+            --><!-- selected tag is used to select default value-->
+            <!-- <div id="pad">
+
+            </div>
+        -->
+            <img style= "width: 400px;" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg">
+        
+   
+</body>
+</html> 
